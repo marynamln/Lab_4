@@ -10,13 +10,24 @@ body {
 .blocks{
     display: flex;
     align-items: flex-start;
-    height: 100%;
 }
 
 .center-panel{
     flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 430px;
+    flex-direction: column;
     background-color: rgba(245, 243, 225, 0.9);
-    height: 700px;
+}
+
+.pizza-panel{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-left: 70px;
+    margin-top: 20px;
 }
 
 .center-top-panel{
@@ -33,7 +44,7 @@ body {
 
 .badge{
     position: fixed;
-    left: 45px;
+    left: 15px;
     top: 0;
     display: flex;
     align-items: center;
@@ -106,6 +117,7 @@ body {
 
 .types-of-pizza{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
     margin-top: 30px;
@@ -126,18 +138,19 @@ body {
 
 .pizza-item {
     display: flex;
-    margin-top: 10px;
     flex-direction: column;
     background-color: white;
     border-radius: 5px;
-    width: 300px;
-    margin-left: 120px;
+    width: 250px;
+    margin: 5px;
     text-align: left;
+    border: 1px solid gray;
+    padding-bottom: 10px;
 }
 
 .pizza-img{
-    width: 300px;
-    height: 300px;
+    width: 248px;
+    height: 250px;
     border-radius: 5px 5px 0 0;
 }
 
@@ -225,7 +238,176 @@ body {
 
 .right-panel{
     flex: 0.5;
-    background-color: darkgray;
+    background-color: #cecbcb;
+    height: 100dvmax;
+}
+
+.inscription{
+    display: flex;
+    flex-direction: column;
+    background-color: #cecbcb;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+}
+
+.order{
+    color: black;
+    font-family: Arial, serif;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.order-number{
+    border-radius: 15px;
+    height: 30px;
+    width: 30px;
+    background-color: orange;
+    color: white;
+    font-family: Arial, serif;
+    font-weight: bold;
+    font-size: medium;
+    border: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.reset{
+    border: none;
+    color: #4f5762;
+    font-family: Arial, serif;
+    font-size: small;
+    background: none;
+    margin-top: 10px;
+}
+
+.pizza-order{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    height: auto;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.order-price{
+    display: flex;
+    flex-direction: row;
+}
+
+.order-name{
+    font-weight: bold;
+    color: #e39000;
+    font-family: Arial, serif;
+    font-size: large;
+    margin: 5px;
+}
+
+.order-sizes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.order-price{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 5px;
+    margin-top: 10px;
+}
+
+.minus-button, .plus-button, .delete-button{
+    border: none;
+    text-align: center;
+    border-radius: 15px;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    font-family: Arial, serif;
+    font-size: large;
+}
+
+.minus-button{
+    background-color: darkred;
+    color: white;
+    font-weight: bold;
+}
+
+.plus-button{
+    background-color: darkgreen;
+    color: white;
+    font-weight: bold;
+}
+
+.delete-button{
+    background-color: white;
+    border: 1px solid gray;
+    color: #e39000;
+    font-weight: bold;
+}
+
+.order-pizza-number{
+    font-family: Arial, serif;
+    width: 23px;
+    height: 30px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.price{
+    font-family: Arial, serif;
+    font-weight: bold;
+    font-size: large;
+}
+
+.right{
+    display: flex;
+    align-items: center;
+    width: 20%;
+    overflow: hidden;
+}
+
+.bottom-right-panel{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-top: 1px solid gray;
+    padding: 10px;
+    height: auto;
+}
+
+.all-price{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-family: Arial, serif;
+    font-weight: bold;
+    font-size: large;
+}
+
+.order-button{
+    border: none;
+    background-color: #e39000;
+    color: white;
+    font-family: Arial, serif;
+    font-weight: bold;
+    font-size: large;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
 }
 
 .bottom-badge{
@@ -233,7 +415,7 @@ body {
     background-color: orange;
     color: white;
     position: fixed;
-    left: 45px;
+    left: 15px;
     bottom: 0;
     border-radius: 5px 5px 0 0;
     font-family: Arial, serif;
