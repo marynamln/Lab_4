@@ -1,10 +1,12 @@
 
+
 body {
     background-color: rgba(245, 243, 225, 0.9);
 }
 
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 
 .blocks{
@@ -21,6 +23,12 @@ body {
     background-color: rgba(245, 243, 225, 0.9);
 }
 
+.pizza-section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
 .pizza-panel{
     display: flex;
     flex-wrap: wrap;
@@ -32,12 +40,13 @@ body {
 
 .center-top-panel{
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     align-items: center;
-    background-color: #232222;
+    background-color: rgba(35, 34, 34, 0.9);
     color: darkgray;
-    width: 100%;
-    height: 50px;
+    height: 80px;
+    width: inherit;
     padding-left: 0;
     font-family: Arial, serif;
 }
@@ -56,11 +65,7 @@ body {
     margin-top: 0;
     border-radius: 0 0 5px 5px;
     text-align: center;
-    height: 70px;
-}
-
-.telephone{
-    margin-left: 100px;
+    height: 95px;
 }
 
 .pizza{
@@ -83,6 +88,15 @@ body {
     transition: all 0.3s ease;
 }
 
+.telephone, .delivery,
+.exit, .days{
+    margin: 5px;
+}
+
+.telephone{
+    margin-left: 70px;
+}
+
 .inscriptions{
     display: flex;
     align-items: center;
@@ -96,7 +110,6 @@ body {
     font-family: Arial, serif;
     font-weight: bold;
     font-size: x-large;
-    margin-top: 20px;
 }
 
 .pizzaNumber{
@@ -111,7 +124,6 @@ body {
     border: none;
     display: inline-block;
     text-align: center;
-    margin-top: 20px;
     margin-left: 10px;
 }
 
@@ -227,6 +239,7 @@ body {
     border: none;
     border-radius: 5px;
     width: 90px;
+    transition: all 0.3s ease;
 }
 
 .small-price, .big-price {
@@ -238,8 +251,11 @@ body {
 
 .right-panel{
     flex: 0.5;
-    background-color: #cecbcb;
-    height: 100dvmax;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    border: 1px solid grey;
+    border-radius: 0 0 5px 5px;
 }
 
 .inscription{
@@ -279,6 +295,7 @@ body {
     font-size: small;
     background: none;
     margin-top: 10px;
+    transition: all 0.3s ease;
 }
 
 .pizza-order{
@@ -286,7 +303,6 @@ body {
     flex-direction: row;
     background-color: white;
     border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
     height: auto;
 }
 
@@ -343,12 +359,14 @@ body {
     background-color: darkred;
     color: white;
     font-weight: bold;
+    transition: all 0.3s ease;
 }
 
 .plus-button{
     background-color: darkgreen;
     color: white;
     font-weight: bold;
+    transition: all 0.3s ease;
 }
 
 .delete-button{
@@ -356,6 +374,7 @@ body {
     border: 1px solid gray;
     color: #e39000;
     font-weight: bold;
+    transition: all 0.3s ease;
 }
 
 .order-pizza-number{
@@ -381,11 +400,16 @@ body {
 
 .bottom-right-panel{
     display: flex;
+    flex-wrap: wrap;
+    bottom: 0;
+    border: none;
+    border-radius: 0 0 5px 5px;
     flex-direction: column;
     background-color: white;
     border-top: 1px solid gray;
     padding: 10px;
     height: auto;
+    width: inherit;
 }
 
 .all-price{
@@ -408,6 +432,7 @@ body {
     padding: 10px;
     border-radius: 5px;
     margin: 10px;
+    transition: all 0.3s ease;
 }
 
 .bottom-badge{
@@ -425,4 +450,13 @@ body {
     height: 100px;
     text-align: center;
     padding: 5px;
+}
+
+.exit:active, .reset:active,
+.small-buy:active, .big-buy:active,
+.order-button:active,
+.delete-button:active,
+.plus-button:active,
+.minus-button:active{
+    transform: scale(0.9);
 }
