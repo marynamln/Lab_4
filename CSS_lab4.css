@@ -18,7 +18,7 @@ body {
     flex: 2;
     display: flex;
     flex-wrap: wrap;
-    min-width: 430px;
+    min-width: 487px;
     flex-direction: column;
     background-color: rgba(245, 243, 225, 0.9);
 }
@@ -32,7 +32,7 @@ body {
 .pizza-panel{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: flex-start;
     margin-left: 70px;
     margin-top: 20px;
@@ -255,7 +255,9 @@ body {
     flex-wrap: nowrap;
     flex-direction: column;
     border: 1px solid grey;
-    border-radius: 0 0 5px 5px;
+    border-bottom: none;
+    background-color: white;
+    height: 100dvmax;
 }
 
 .inscription{
@@ -393,6 +395,7 @@ body {
 
 .right{
     display: flex;
+    background-color: white;
     align-items: center;
     width: 20%;
     overflow: hidden;
@@ -459,4 +462,17 @@ body {
 .plus-button:active,
 .minus-button:active{
     transform: scale(0.9);
+}
+
+.footer{
+    display: flex;
+    background-color: white;
+    text-align: center;
+    font-family: Arial, serif;
+    font-size: small;
+    color: #4f5762;
+    border-top: 1px solid grey;
+    justify-content: center;
+    align-items: center;
+    height: 95px;
 }
