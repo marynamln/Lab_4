@@ -158,6 +158,43 @@ body {
     text-align: left;
     border: 1px solid gray;
     padding-bottom: 10px;
+    z-index: 1;
+}
+
+.new{
+    position: absolute;
+    display: inline-block;
+    background-color: darkred;
+    color: white;
+    border-radius: 5px;
+    font-family: Arial, serif;
+    font-weight: bold;
+    font-size: small;
+    padding: 5px;
+    z-index: 2;
+    margin-top: -10px;
+    margin-left: -10px;
+    width: 50px;
+    height: auto;
+    text-align: center;
+}
+
+.popular{
+    position: absolute;
+    display: inline-block;
+    background-color: darkgreen;
+    color: white;
+    border-radius: 5px;
+    font-family: Arial, serif;
+    font-weight: bold;
+    font-size: small;
+    padding: 5px;
+    z-index: 2;
+    margin-top: -10px;
+    margin-left: -10px;
+    width: 80px;
+    height: auto;
+    text-align: center;
 }
 
 .pizza-img{
