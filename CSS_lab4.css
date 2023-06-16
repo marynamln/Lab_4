@@ -1,5 +1,3 @@
-
-
 body {
     background-color: rgba(245, 243, 225, 0.9);
 }
@@ -51,7 +49,7 @@ body {
     font-family: Arial, serif;
 }
 
-.badge{
+/*.badge{
     position: fixed;
     left: 15px;
     top: 0;
@@ -66,14 +64,21 @@ body {
     border-radius: 0 0 5px 5px;
     text-align: center;
     height: 95px;
-}
+}*/
 
 .pizza{
+    color: white;
+    width: 70px;
+    position: fixed;
+    left: 15px;
+    top: 15px;
     font-family: Arial, serif;
     font-weight: bold;
     font-size: medium;
     white-space: pre-line;
     padding: 5px;
+    text-align: center;
+    z-index: 2;
 }
 
 .exit{
@@ -146,6 +151,16 @@ body {
     background-color: #e39000;
     color: white;
     padding: 5px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.meaty, .pineapple,
+.mushroom, .seafood, .vegetarian{
+    border: none;
+    background: none;
+    transition: all 0.3s ease;
+    color: #e39000;
 }
 
 .pizza-item {
@@ -294,7 +309,9 @@ body {
     border: 1px solid grey;
     border-bottom: none;
     background-color: white;
-    height: 100dvmax;
+    height: auto;
+    border-bottom: 1px solid grey;
+    border-radius: 0 0 5px 5px;
 }
 
 .inscription{
@@ -422,9 +439,16 @@ body {
     height: 30px;
     padding: 5px;
     font-weight: bold;
+    text-align: center;
 }
 
 .price{
+    font-family: Arial, serif;
+    font-weight: bold;
+    font-size: large;
+}
+
+.money{
     font-family: Arial, serif;
     font-weight: bold;
     font-size: large;
@@ -462,6 +486,10 @@ body {
     font-size: large;
 }
 
+.money[id="all"]{
+    font-size: large;
+}
+
 .order-button{
     border: none;
     background-color: #e39000;
@@ -475,21 +503,32 @@ body {
     transition: all 0.3s ease;
 }
 
-.bottom-badge{
-    display: flex;
-    background-color: orange;
-    color: white;
+.discount{
     position: fixed;
-    left: 15px;
     bottom: 0;
-    border-radius: 5px 5px 0 0;
+    left: 15px;
+    width: 70px;
+    height: 150px;
+    z-index: 1;
+}
+
+.discount[id="up"]{
+    height: 170px;
+    top: 0;
+    transform: rotate(180deg);
+}
+
+.text{
+    z-index: 2;
+    position: fixed;
+    bottom: 5px;
+    left: 15px;
     font-family: Arial, serif;
     font-weight: bold;
-    font-size: medium;
+    font-size: small;
     width: 70px;
-    height: 100px;
     text-align: center;
-    padding: 5px;
+    color: white;
 }
 
 .exit:active, .reset:active,
@@ -497,7 +536,10 @@ body {
 .order-button:active,
 .delete-button:active,
 .plus-button:active,
-.minus-button:active{
+.minus-button:active,
+.all:active, .meaty:active,
+.pineapple:active, .mushroom:active,
+.seafood:active, .vegetarian:active{
     transform: scale(0.9);
 }
 
@@ -511,5 +553,23 @@ body {
     border-top: 1px solid grey;
     justify-content: center;
     align-items: center;
-    height: 95px;
+    height: 65px;
+    width: 100%;
+}
+
+@media screen and (max-width: 930px){
+    .days{
+        display: none;
+    }
+
+    .delivery{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 950px){
+
+    .delivery{
+        display: none;
+    }
 }
